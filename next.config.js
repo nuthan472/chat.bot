@@ -1,9 +1,8 @@
-// next.config.js
-const path = require('path');
-
-module.exports = {
-  webpack(config) {
-    config.resolve.alias['@'] = path.join(__dirname, 'app'); // This sets up aliasing
-    return config;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
   },
 };
+
+module.exports = nextConfig;
